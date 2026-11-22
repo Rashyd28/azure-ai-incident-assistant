@@ -1,4 +1,4 @@
-Azure Cloud Incident Assistant – Architecture
+Azure Cloud Incident Assistant Architecture
 
 1. Architecture Overview
 
