@@ -1,0 +1,12 @@
+{
+  "Incident": "IIS Website Outage",
+  "Computer": "AZURE-LAB-VM",
+  "OperatingSystem": "Windows 10 Enterprise",
+  "ServiceName": "W3SVC",
+  "ServiceStatus": "Stopped",
+  "Port": 80,
+  "PortAccessible": false,
+  "Severity": "High",
+  "Description": "The IIS web server is stopped and the website is unavailable.",
+  "Timestamp": "2026-11-27 14:00:00"
+}
