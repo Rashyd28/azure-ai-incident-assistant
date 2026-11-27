@@ -5,6 +5,9 @@ Deployment Guide – AI-Powered Azure Cloud Incident Assistant
 This guide documents the deployment and configuration of an AI-powered cloud incident investigation lab using Microsoft Azure.
 
 The project combines Azure infrastructure, PowerShell automation, secure credential management, workflow orchestration, and Microsoft Foundry.
+The overall solution architecture is documented in:
+
+`docs/architecture/architecture.md`
 
 2. Prerequisites
 
@@ -61,6 +64,11 @@ PowerShell was used to collect system and service information, including:
 * Incident timestamp.
 
 The collected information was converted into JSON for submission to the Logic App.
+The evidence collection script is available in:
+
+`scripts/collect-incident-evidence.ps1`
+
+The script can be executed from an elevated PowerShell session on the Azure Virtual Machine.
 
 8. Azure Key Vault Configuration
 
@@ -92,6 +100,7 @@ The workflow included:
 The HTTP action was configured to submit incident information to the Foundry Responses API.
 
 The request used the input field required by the Responses API.
+The workflow was tested by submitting the incident JSON payload to the Logic App HTTP trigger. The workflow execution history was reviewed to verify the successful execution of the relevant actions.
 
 11. End-to-End Validation
 
@@ -104,6 +113,7 @@ The following activities were performed:
 5. Submitted the incident information to the Logic App.
 6. Verified the workflow’s integration with Key Vault and Microsoft Foundry.
 7. Generated an AI-powered incident analysis.
+8. The workflow was tested by submitting the incident JSON payload to the Logic App HTTP trigger. The workflow execution history was reviewed to verify the successful execution of the relevant actions.
 
 12. Security Considerations
 
