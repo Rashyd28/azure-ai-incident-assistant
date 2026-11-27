@@ -97,3 +97,37 @@ Future Improvements
 
 
 Project Category: Cloud Engineering | AI Automation | Azure Infrastructure
+## Repository Structure
+
+```text
+azure-ai-incident-assistant/
+│
+├── README.md
+├── docs/
+│   ├── architecture/
+│   │   ├── README.md
+│   │   └── architecture.md
+│   ├── screenshots/
+│   ├── testing/
+│   │   ├── README.md
+│   │   └── sample-incident.json
+│   ├── deployment-guide.md
+│   └── testing-results.md
+│
+└── scripts/
+    ├── README.md
+    └── collect-incident-evidence.ps1
+```
+
+## Project Documentation
+
+- [Architecture Documentation](docs/architecture/architecture.md)
+- [Deployment Guide](docs/deployment-guide.md)
+- [Testing Results](docs/testing-results.md)
+- [Sample Incident Data](docs/testing/sample-incident.json)
+- [PowerShell Evidence Collection Script](scripts/collect-incident-evidence.ps1)
+
+## Project Screenshots
+
+See the [screenshots folder](docs/screenshots/) for Azure infrastructure, networking, Logic App, Key Vault and Microsoft Foundry evidence.
+
