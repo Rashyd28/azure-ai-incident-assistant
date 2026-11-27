@@ -68,3 +68,16 @@ This was an educational demonstration rather than a production incident manageme
 8. Supporting Evidence
 
 Screenshots are available in the docs/screenshots directory.
+## 9. AI Analysis Validation
+
+The incident information was successfully submitted to the Azure Logic App and processed through Microsoft Foundry using the GPT-5 mini model.
+
+The AI analysis was reviewed to assess whether it could:
+
+* Identify the IIS service outage.
+* Interpret the failed port 80 connectivity test.
+* Explain the likely impact on website availability.
+* Recommend relevant troubleshooting and recovery actions.
+
+The AI-generated analysis demonstrates how generative AI can assist cloud engineers with initial incident investigation and troubleshooting.
+
