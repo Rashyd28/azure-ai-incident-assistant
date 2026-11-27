@@ -32,18 +32,6 @@ GPT-5 mini	Analyses incident information and generates recommendations
 8. GPT-5 mini analyses the incident and generates troubleshooting recommendations.
 9. The workflow returns the AI response.
 
-4. Architecture Diagram
-
-flowchart TD
-    A[Azure Virtual Machine] --> B[IIS Website]
-    B --> C[Simulated Website Outage]
-    C --> D[PowerShell Evidence Collection]
-    D --> E[Logic App HTTP Trigger]
-    E --> F[Azure Key Vault]
-    F --> G[Microsoft Foundry API]
-    G --> H[GPT-5 mini]
-    H --> I[AI Incident Analysis]
-    I --> J[Logic App Response]
 
 5. Security Design
 
@@ -65,3 +53,20 @@ This is a demonstration environment.
 7. Conclusion
 
 The architecture demonstrates how Azure infrastructure, PowerShell, Logic Apps, Key Vault, managed identity, and Microsoft Foundry can be integrated to support AI-assisted cloud incident investigation.
+## Azure Architecture Diagram
+
+```mermaid
+flowchart TD
+    VM[Azure Virtual Machine] --> IIS[IIS Website]
+    IIS --> OUTAGE[Simulated IIS Outage]
+    OUTAGE --> PS[PowerShell Evidence Collection]
+    PS -->|Incident JSON| TRIGGER[Logic App HTTP Trigger]
+    TRIGGER --> WF[Logic App Workflow]
+    WF --> HTTP[Logic App HTTP Action]
+    WF --> KV[Azure Key Vault]
+    KV -->|API Credential| HTTP
+    HTTP --> FOUNDRY[Microsoft Foundry]
+    FOUNDRY --> MODEL[GPT-5 mini]
+    MODEL --> REPORT[AI Incident Analysis]
+    REPORT --> RESPONSE[Logic App Response]
+```
